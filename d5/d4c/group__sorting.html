@@ -301,47 +301,47 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">int</span> *b = (<span class="keywordtype">int</span> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>)); <span class="comment">/* dynamic memory must be freed */</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">int</span> c = l;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> p1, p2;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    p1 = l;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    p2 = ((l + r) / 2) + 1;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">while</span> ((p1 &lt; ((l + r) / 2) + 1) &amp;&amp; (p2 &lt; r + 1))</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (a[p1] &lt;= a[p2])</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            b[c++] = a[p1];</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            p1++;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            b[c++] = a[p2];</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            p2++;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">if</span> (p2 == r + 1)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">while</span> ((p1 &lt; ((l + r) / 2) + 1))</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            b[c++] = a[p1];</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            p1++;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">while</span> ((p2 &lt; r + 1))</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            b[c++] = a[p2];</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            p2++;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">for</span> (c = l; c &lt; r - l + 1; c++) a[c] = b[c];</div>
+<div class="fragment"><div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> *b = (<span class="keywordtype">int</span> *)<a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a>(n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>)); <span class="comment">/* dynamic memory must be freed */</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">int</span> c = l;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">int</span> p1, p2;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    p1 = l;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    p2 = ((l + r) / 2) + 1;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">while</span> ((p1 &lt; ((l + r) / 2) + 1) &amp;&amp; (p2 &lt; r + 1))</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span> (a[p1] &lt;= a[p2])</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            b[c++] = a[p1];</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            p1++;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            b[c++] = a[p2];</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            p2++;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (p2 == r + 1)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">while</span> ((p1 &lt; ((l + r) / 2) + 1))</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            b[c++] = a[p1];</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            p1++;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">while</span> ((p2 &lt; r + 1))</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            b[c++] = a[p2];</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            p2++;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(b);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">for</span> (c = l; c &lt; r + 1; c++) a[c] = b[c];</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(b);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
 <div class="ttc" id="amalloc__dbg_8h_html_a725f50ecaf1959d96de79b36b4788fee"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a725f50ecaf1959d96de79b36b4788fee">malloc</a></div><div class="ttdeci">#define malloc(bytes)</div><div class="ttdoc">This macro replace the standard malloc function with malloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:18</div></div>
 </div><!-- fragment -->
 </div>
@@ -394,24 +394,24 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>{</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">if</span> (r - l == 1)</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">if</span> (a[l] &gt; a[r])</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <a class="code hl_function" href="../../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8">swap</a>(&amp;a[l], &amp;a[r]);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (l != r)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_function" href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a>(a, n, l, (l + r) / 2);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_function" href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a>(a, n, ((l + r) / 2) + 1, r);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <a class="code hl_function" href="../../d5/d4c/group__sorting.html#ga8dc3ec66cb3350313fdb34bfd1674729">merge</a>(a, l, r, n);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">/* no change if l == r */</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
-<div class="ttc" id="agroup__sorting_html_ga4b9708d87be7a409eff20e5e7e8b43c8"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8">swap</a></div><div class="ttdeci">void swap(int *a, int *b)</div><div class="ttdoc">Swap two integer variables.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:17</div></div>
-<div class="ttc" id="agroup__sorting_html_ga8dc3ec66cb3350313fdb34bfd1674729"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga8dc3ec66cb3350313fdb34bfd1674729">merge</a></div><div class="ttdeci">void merge(int *a, int l, int r, int n)</div><div class="ttdoc">Perform merge of segments.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:33</div></div>
-<div class="ttc" id="agroup__sorting_html_gab99b8a397bdd0bf2903d66c22ba4ba43"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a></div><div class="ttdeci">void merge_sort(int *a, int n, int l, int r)</div><div class="ttdoc">Merge sort algorithm implementation.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:82</div></div>
+<div class="fragment"><div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">if</span> (r - l == 1)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">if</span> (a[l] &gt; a[r])</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <a class="code hl_function" href="../../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8">swap</a>(&amp;a[l], &amp;a[r]);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (l != r)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <a class="code hl_function" href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a>(a, n, l, (l + r) / 2);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_function" href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a>(a, n, ((l + r) / 2) + 1, r);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_function" href="../../d5/d4c/group__sorting.html#ga8dc3ec66cb3350313fdb34bfd1674729">merge</a>(a, l, r, n);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">/* no change if l == r */</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+<div class="ttc" id="agroup__sorting_html_ga4b9708d87be7a409eff20e5e7e8b43c8"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga4b9708d87be7a409eff20e5e7e8b43c8">swap</a></div><div class="ttdeci">void swap(int *a, int *b)</div><div class="ttdoc">Swap two integer variables.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:19</div></div>
+<div class="ttc" id="agroup__sorting_html_ga8dc3ec66cb3350313fdb34bfd1674729"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#ga8dc3ec66cb3350313fdb34bfd1674729">merge</a></div><div class="ttdeci">void merge(int *a, int l, int r, int n)</div><div class="ttdoc">Perform merge of segments.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:35</div></div>
+<div class="ttc" id="agroup__sorting_html_gab99b8a397bdd0bf2903d66c22ba4ba43"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a></div><div class="ttdeci">void merge_sort(int *a, int n, int l, int r)</div><div class="ttdoc">Merge sort algorithm implementation.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:84</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -616,12 +616,12 @@ Optimized algorithm - takes half the time as other </p><dl class="params"><dt>Pa
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">int</span> t;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    t = *a;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    *a = *b;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    *b = t;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+<div class="fragment"><div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">int</span> t;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    t = *a;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    *a = *b;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    *b = t;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

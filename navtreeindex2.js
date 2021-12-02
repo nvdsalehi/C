@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"d9/dcc/prim_8c.html#a72ec66b10f86d67064d34f2b2717fdfc":[15,0,9,0,2],
 "d9/dcc/prim_8c.html#abf9e6b7e6f15df4b525a2e7705ba3089":[15,0,9,0,1],
 "d9/dcc/prim_8c.html#addac7a8c7bfd3e5573dad1f6aeff7768":[15,0,9,0,5],
 "d9/dcc/prim_8c.html#aff3f4c22009b2aa4e385a76a8a1cdc1c":[15,0,9,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "dd/d8c/adaline__learning_8c.html#ab4ecb3accf5d9e0263087e7265bbe3a9":[15,0,11,0,10],
 "dd/d93/client_8c.html":[15,0,1,0],
 "dd/d93/client_8c.html#a1e43924adac4ae865aa0acf79710261c":[15,0,1,0,2],
-"dd/d93/client_8c.html#a392fb874e547e582e9c66a08a1f23326":[15,0,1,0,0],
-"dd/d93/client_8c.html#a614217d263be1fb1a5f76e2ff7be19a2":[15,0,1,0,1]
+"dd/d93/client_8c.html#a392fb874e547e582e9c66a08a1f23326":[15,0,1,0,0]
 };
