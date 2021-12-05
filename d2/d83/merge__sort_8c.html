@@ -158,11 +158,11 @@ Functions</h2></td></tr>
 
 <p>Main function. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 on exit </dd></dl>
-<div class="fragment"><div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>{</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    srand(time(NULL));    <span class="comment">// intialize random number generator</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <a class="code hl_function" href="../../d2/d83/merge__sort_8c.html#aa8dca7b867074164d5f45b0f3851269d">test</a>();               <span class="comment">// run self-test implementations</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+<div class="fragment"><div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>{</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    srand(time(NULL));    <span class="comment">// intialize random number generator</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_function" href="../../d2/d83/merge__sort_8c.html#aa8dca7b867074164d5f45b0f3851269d">test</a>();               <span class="comment">// run self-test implementations</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
 <div class="ttc" id="amerge__sort_8c_html_aa8dca7b867074164d5f45b0f3851269d"><div class="ttname"><a href="../../d2/d83/merge__sort_8c.html#aa8dca7b867074164d5f45b0f3851269d">test</a></div><div class="ttdeci">static void test()</div><div class="ttdoc">Self-test implementations.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:106</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -214,7 +214,8 @@ Here is the call graph for this function:</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        assert(a[i] &lt;= a[i + 1]);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a>(a);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    printf(<span class="stringliteral">&quot;All tests have successfully passed!\n&quot;</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
 <div class="ttc" id="agroup__sorting_html_gab99b8a397bdd0bf2903d66c22ba4ba43"><div class="ttname"><a href="../../d5/d4c/group__sorting.html#gab99b8a397bdd0bf2903d66c22ba4ba43">merge_sort</a></div><div class="ttdeci">void merge_sort(int *a, int n, int l, int r)</div><div class="ttdoc">Merge sort algorithm implementation.</div><div class="ttdef"><b>Definition:</b> merge_sort.c:84</div></div>
 <div class="ttc" id="amalloc__dbg_8h_html_a9cc854374299a1dd933bf62029761768"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#a9cc854374299a1dd933bf62029761768">free</a></div><div class="ttdeci">#define free(ptr)</div><div class="ttdoc">This macro replace the standard free function with free_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:26</div></div>
 <div class="ttc" id="amalloc__dbg_8h_html_afdddaa949a93c1ef559a638e98f9c21b"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a></div><div class="ttdeci">#define calloc(elemCount, elemSize)</div><div class="ttdoc">This macro replace the standard calloc function with calloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:22</div></div>
